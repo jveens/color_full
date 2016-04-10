@@ -16,7 +16,11 @@
  $blue: #3498db;
 
  $body-bg: $blue;
- $home-bg: $blue;
+/* $home-bg: $blue;*/
+ $jumbotron-bg: rgba(255,255,255,0.3);
+
+ $sans: "acumin-pro-semi-condensed",sans-serif;
+ $serif: "freight-big-pro",sans-serif;
 
 
  @import "bootstrap-sprockets";
@@ -29,4 +33,12 @@
  	color: $white;
  }
 
+ h1, h2, h3 {
+ 	font-family: $serif;
+ 	text-transform: uppercase;
+ }
 
+ h4, h5, h6, p {
+ 	font-family: $sans;
+ 	text-transform: uppercase;
+ }
