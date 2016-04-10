@@ -12,15 +12,37 @@
  *
  */
 
+ $font-family-serif: "freight-big-pro",sans-serif;
+ $font-family-sans-serif: "acumin-pro-semi-condensed",sans-serif;
+
  $white: #ffffff;
+ $black: #222;
  $blue: #3498db;
+ $red: #FF6347;
+ $green: #3CB371;
+ $purple: #DA70D6;
 
  $body-bg: $blue;
 /* $home-bg: $blue;*/
  $jumbotron-bg: rgba(255,255,255,0.3);
+ $jumbotron-heading-font-size: 9rem;
+
+ $btn-default-color: $black;
+ $btn-default-border: transparent;
+ $btn-default-bg: transparent;
+ $btn-font-weight: bold;
+
+ $border-radius-base: 0;
+ $border-radius-small: 0;
+ $border-radius-large: 0;
 
  $sans: "acumin-pro-semi-condensed",sans-serif;
  $serif: "freight-big-pro",sans-serif;
+
+ @mixin sans-bold {
+ 	font-family: $sans;
+ 	text-transform: uppercase;
+ }
 
 
  @import "bootstrap-sprockets";
@@ -31,6 +53,12 @@
  	height: 100%;
  	width: 100%;
  	color: $white;
+ 	font-size: 62.5%;
+ 	-webkit-font-smoothing: antialiased;
+ }
+
+ .btn-default {
+ 	@include sans-bold;
  }
 
  h1, h2, h3 {
@@ -42,3 +70,9 @@
  	font-family: $sans;
  	text-transform: uppercase;
  }
+
+ h5 {
+ 	font-size: 2rem;
+ 	font-weight: bold;
+ }
+

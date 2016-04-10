@@ -4,3 +4,55 @@
 
 
 // Home Page
+
+// Color Change by: Steve Calamia (http://codepen.io/metagrapher/) 
+body.home-page {
+      animation: colorchange 40s; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 40s; /* Chrome and Safari */
+    }
+
+.jumbotron {
+	outline: 4px solid rgba(255,255,255,0.3);
+	outline-offset: 10px;
+}
+
+h1 {
+	animation: textchange 40s;
+	-webkit-animation: textchange 40s;
+}
+
+    @keyframes colorchange
+    {
+      0%   {background: $red;}
+      25%  {background: $purple;}
+      50%  {background: $blue;}
+      75%  {background: $green;}
+      100% {background: $red;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: $red;}
+      25%  {background: $purple;}
+      50%  {background: $blue;}
+      75%  {background: $green;}
+      100% {background: $red;}
+    }
+    @keyframes textchange
+    {
+      0%   {color: $red;}
+      25%  {color: $purple;}
+      50%  {color: $blue;}
+      75%  {color: $green;}
+      100% {color: $red;}
+    }
+
+    @-webkit-keyframes textchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {color: $red;}
+      25%  {color: $purple;}
+      50%  {color: $blue;}
+      75%  {color: $green;}
+      100% {color: $red;}
+    }
