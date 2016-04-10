@@ -7,9 +7,10 @@
 
 // Color Change by: Steve Calamia (http://codepen.io/metagrapher/) 
 body.home-page {
-      animation: colorchange 40s; /* animation-name followed by duration in seconds*/
+      animation: colorchange 40s infinite; /* animation-name followed by duration in seconds*/
          /* you could also use milliseconds (ms) or something like 2.5s */
-      -webkit-animation: colorchange 40s; /* Chrome and Safari */
+      -webkit-animation: colorchange 40s infinite; /* Chrome and Safari */
+
     }
 
 .jumbotron {
@@ -17,9 +18,9 @@ body.home-page {
 	outline-offset: 10px;
 }
 
-h1 {
-	animation: textchange 40s;
-	-webkit-animation: textchange 40s;
+h5 {
+	animation: textchange 40s infinite;
+	-webkit-animation: textchange 40s infinite;
 }
 
     @keyframes colorchange

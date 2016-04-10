@@ -12,11 +12,15 @@
  *
  */
 
+ $container-desktop: 800px;
+
  $font-family-serif: "freight-big-pro",sans-serif;
  $font-family-sans-serif: "acumin-pro-semi-condensed",sans-serif;
 
  $white: #ffffff;
  $black: #222;
+ $seethru: rgba(255,255,255,0.3);
+ $transparent: transparent;
  $blue: #3498db;
  $red: #FF6347;
  $green: #3CB371;
@@ -24,8 +28,11 @@
 
  $body-bg: $blue;
 /* $home-bg: $blue;*/
- $jumbotron-bg: rgba(255,255,255,0.3);
+ $jumbotron-bg: $seethru;
  $jumbotron-heading-font-size: 9rem;
+
+ $navbar-default-border: 0;
+ $navbar-default-bg: transparent;
 
  $btn-default-color: $black;
  $btn-default-border: transparent;
@@ -74,5 +81,6 @@
  h5 {
  	font-size: 2rem;
  	font-weight: bold;
+
  }
 
