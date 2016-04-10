@@ -12,6 +12,21 @@
  *
  */
 
+ $white: #ffffff;
+ $blue: #3498db;
+
+ $body-bg: $blue;
+ $home-bg: $blue;
+
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "pages";
+
+ html, body {
+ 	height: 100%;
+ 	width: 100%;
+ 	color: $white;
+ }
+
+
