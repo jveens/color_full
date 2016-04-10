@@ -26,13 +26,15 @@
  $green: #3CB371;
  $purple: #DA70D6;
 
- $body-bg: $blue;
+ $body-bg: $purple;
 /* $home-bg: $blue;*/
  $jumbotron-bg: $seethru;
  $jumbotron-heading-font-size: 9rem;
 
  $navbar-default-border: 0;
  $navbar-default-bg: transparent;
+ $navbar-default-color: $black;
+ $navbar-default-link-color: $black;
 
  $btn-default-color: $black;
  $btn-default-border: transparent;
@@ -59,8 +61,8 @@
  html, body {
  	height: 100%;
  	width: 100%;
- 	color: $white;
- 	font-size: 62.5%;
+ 	color: $black;
+ 	/*font-size: 62.5%;*/
  	-webkit-font-smoothing: antialiased;
  }
 
@@ -81,6 +83,23 @@
  h5 {
  	font-size: 2rem;
  	font-weight: bold;
+ }
+
+ h2 {
+ 	font-size: 4rem;
+ 	text-transform: capitalize;
+ }
+
+
+ .navbar-brand {
+ 	color: $white;
+ 	font-family: $serif;
+ }
+
+ .form-container {
+ 	width: 50%;
+ 	margin: 0 auto;
+ 	min-width: 300px;
 
  }
 

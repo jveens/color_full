@@ -10,6 +10,14 @@ body.home-page {
       animation: colorchange 40s infinite; /* animation-name followed by duration in seconds*/
          /* you could also use milliseconds (ms) or something like 2.5s */
       -webkit-animation: colorchange 40s infinite; /* Chrome and Safari */
+      color: $white;
+
+	.navbar-default .navbar-nav > li > a {
+		color: $white;
+		&:hover, &:active {
+			color: $seethru;
+		}
+		}	
 
     }
 
