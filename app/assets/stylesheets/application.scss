@@ -14,7 +14,7 @@
  *
  */
 
- $container-desktop: 800px;
+ $container-large-desktop: 970px;
 
  $font-family-serif: "freight-big-pro",sans-serif;
  $font-family-sans-serif: "acumin-pro-semi-condensed",sans-serif;
@@ -24,19 +24,23 @@
  $seethru: rgba(255,255,255,0.3);
  $transparent: transparent;
  $blue: #3498db;
+ $gainsboro: #DCDCDC;
  $red: #FF6347;
  $green: #3CB371;
  $purple: #DA70D6;
 
  $body-bg: $white;
-/* $home-bg: $blue;*/
+ $state-info-bg: transparentize($red, 0.9);
+ $state-info-text: $red;
  $jumbotron-bg: $seethru;
  $jumbotron-heading-font-size: 9rem;
+ $brand-primary: $black;
 
  $navbar-default-border: 0;
- $navbar-default-bg: transparent;
- $navbar-default-color: $black;
- $navbar-default-link-color: $black;
+ $navbar-default-bg: white;
+ $navbar-default-color: $white;
+ $navbar-default-link-color: $white;
+ $navbar-default-link-hover-color: $purple;
 
  $btn-default-color: $black;
  $btn-default-border: transparent;
@@ -92,16 +96,41 @@
  	text-transform: capitalize;
  }
 
+ .alert-info p {
+	text-transform: none;
+ }
+
+ .alert-info.alert {
+ 	margin-bottom: 0;
+ }
+
+ input[type="text"], 
+ input[type="password"],
+ input[type="email"]
+  {
+ 	max-width: 320px;
+ 	margin: 0 auto;
+ }
+
 
  .navbar-brand {
  	color: $white;
  	font-family: $serif;
+ 	text-transform: uppercase;
+ 	font-size: 2rem;
+ 	font-weight: bold;
  }
 
  .form-container {
  	width: 50%;
  	margin: 0 auto;
  	min-width: 300px;
-
  }
 
+ .navbar-default {
+	// animation: colorchange 40s infinite;
+	// -webkit-animation: colorchange 40s infinite;
+	background-color: $black;
+	color: $white;
+	margin-bottom: 0;
+ }

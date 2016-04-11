@@ -1,6 +1,14 @@
-<h1>Editing Color</h1>
+<div class="container">
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @color %> |
-<%= link_to 'Back', colors_path %>
+	<% content_for :body_class, "edit-color" %>
+
+	<h1>Edit Color</h1>
+
+	<%= render 'form' %>
+
+	<%= link_to 'Show', @color %> |
+	<%= link_to 'Back', colors_path %>
+
+	
+</div>

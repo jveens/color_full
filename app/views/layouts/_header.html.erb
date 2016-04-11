@@ -8,13 +8,23 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
+    <ul class="nav navbar-nav navbar-left">
     <% if !current_page?(root_url) %>
-      <%= link_to "Color Full", root_path, class: "navbar-brand" %>
+      <li><%= link_to "Colour-Full", root_path, class: "navbar-brand" %></li>
     <% end -%>
+    </ul>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav navbar-left">
+      <% if user_signed_in? %>
+        <% unless current_page?(colors_url) %>
+          <li><%= link_to "My Colours", colors_path, class: "btn btn-default" %></li>
+        <% end -%>
+        <li><%= link_to '+ New Color', new_color_path %></li>
+      <% end -%>
+    </ul>
     <ul class="nav navbar-nav navbar-right">
     <% if user_signed_in? %>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

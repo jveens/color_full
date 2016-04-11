@@ -1,5 +1,10 @@
-<h1>New Color</h1>
+<% content_for :body_class, "add-color" %>
+<div class="text-center">
+	
+	<h1>Add New</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Back', colors_path %>
+	<%= link_to 'Back', colors_path %>
+
+</div>

@@ -12,11 +12,15 @@ body.home-page {
       -webkit-animation: colorchange 40s infinite; /* Chrome and Safari */
       color: $white;
 
+    .navbar-default {
+      background-color: $transparent;
+    }
+
 	.navbar-default .navbar-nav > li > a {
-		color: $white;
-		&:hover, &:active {
-			color: $seethru;
-		}
+  		color: $white;
+  		&:hover, &:active {
+  			color: $seethru;
+  		}
 		}	
 
     }
@@ -24,6 +28,8 @@ body.home-page {
 .jumbotron {
 	outline: 4px solid rgba(255,255,255,0.3);
 	outline-offset: 10px;
+  margin-top: 100px;
+  margin: 100px 30px 0;
 }
 
 h5 {
@@ -65,3 +71,21 @@ h5 {
       75%  {color: $green;}
       100% {color: $red;}
     }
+
+body.edit-color {
+
+}
+
+.color-section {
+  padding: 20px 15px 25px;
+  min-height: 190px;
+
+  h4 {
+    font-weight: bold;
+  }
+}
+
+.spectrum {
+  min-height: 33px;
+  position: relative;
+}

@@ -1,16 +1,14 @@
-<h1>Listing Colors</h1>
-
-<%= link_to 'New Color', new_color_path %>
-
 <div class="row">
 
     <% @colors.each do |color| %>
-      <div class="col-md-3 col-sm-4 col-xs-6" style="background-color: <%= color.hexcode %>;">
-        <h4><%= color.name %></h4>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="background-color: <%= color.hexcode %>;">
+      	<div class="color-section">
+        <h4 ><%= color.name %></h4>
         <p><%= color.hexcode %></p>
         <%= link_to 'Show', color %>
         <%= link_to 'Edit', edit_color_path(color) %>
         <%= link_to 'Destroy', color, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
       </div>
     <% end %>
 

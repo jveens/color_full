@@ -18,6 +18,24 @@
 //= require turbolinks
 //= require_tree .
 
-$( document ).ready(function() {
-    $('input[type=text].spectrum').minicolors({theme: 'bootstrap'});
-});
+
+var ready;
+ready = function() {
+
+  console.log('ready');
+    $('input[type=text].spectrum').minicolors({
+    	theme: 'bootstrap',
+    	inline: true,
+    	defaultValue: '#fff',
+    	change: function(value, opacity) {
+	        console.log(value + ' - ' + opacity);
+	        $('body.add-color').css('background-color', value);
+	    }
+    });
+
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+
+;
