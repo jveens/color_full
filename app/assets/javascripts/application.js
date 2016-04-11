@@ -12,6 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.minicolors
+//= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+    $('input[type=text].spectrum').minicolors({theme: 'bootstrap'});
+});
