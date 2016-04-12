@@ -107,6 +107,29 @@
  	text-transform: capitalize;
  }
 
+ p.large.serif, a.large.serif {
+ 	font-family: $serif;
+ 	font-size: 4rem;
+ 	font-weight: bold;
+ }
+
+ a.large.serif {
+ 	font-size: 3rem;
+
+ 	&:hover {
+ 		color: $purple;
+ 	}
+ }
+
+ p.large.sans {
+ 	font-family: $sans;
+ 	font-weight: bold;
+ 	font-size: 2rem;
+ 	letter-spacing: 0.5px;
+ }
+
+
+
  span.email {
  	text-transform: lowercase;
  }

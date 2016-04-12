@@ -36,6 +36,7 @@ class ColorsController < ApplicationController
   # POST /colors.json
   def create
     @color = Color.new(color_params)
+    @color.user_id = current_user.id
 
     respond_to do |format|
       if @color.save

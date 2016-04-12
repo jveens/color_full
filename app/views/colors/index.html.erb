@@ -1,5 +1,7 @@
 
 
+  <% if @colors.first %>
+
     <% @colors.each do |color| %>
       <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="background-color: <%= color.hexcode %>;">
       	<div class="color-section text-center">
@@ -21,6 +23,15 @@
 
       </div>
     <% end %>
+
+  <% else %>
+    <div class="container text-center no-colors">
+      <p class="large serif">Uh oh!</p>
+      <p class="large sans">It appears that you're living in a black &amp; white world.<br>Why not add a little colour by clicking the link below?</p>
+      <!-- <a class="large serif" href=""> + Add A Colour. </a> -->
+      <%= link_to '+ Add a Colour', new_color_path, class: 'large serif' %>
+    </div>
+  <% end -%>
 
 
 
