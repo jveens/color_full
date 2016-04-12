@@ -97,8 +97,6 @@
  	text-transform: uppercase;
  }
 
- 
-
  h5 {
  	font-size: 2rem;
  	font-weight: bold;
@@ -107,6 +105,10 @@
  h2 {
  	font-size: 4rem;
  	text-transform: capitalize;
+ }
+
+ span.email {
+ 	text-transform: lowercase;
  }
 
  .alert-info p {
@@ -147,3 +149,5 @@
 	color: $white;
 	margin-bottom: 0;
  }
+
+

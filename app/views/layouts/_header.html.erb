@@ -22,10 +22,8 @@
     <ul class="nav navbar-nav navbar-left">
       <li><%= link_to "Explore", colors_path, class: "btn btn-default btn-bold" %></li>
       <% if user_signed_in? %>
-        <% unless current_page?(colors_url) %>
           <li><%= link_to "My Colours", colors_path(id: current_user.id ) %></li>
-        <% end -%>
-          <li><%= link_to '+ New Color', new_color_path %></li>
+          <li><%= link_to '+ New Colour', new_color_path %></li>
       <% end -%>
     </ul>
     <ul class="nav navbar-nav navbar-right">

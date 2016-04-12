@@ -92,11 +92,36 @@ body.edit-color {
 }
 
 .color-section {
-  padding: 20px 15px 25px;
   min-height: 220px;
+  position: relative;
 
-  h4 {
+  &:hover {
+    h3 {
+      color: $transparent;
+    }
+    .links-container {
+      opacity: 1;
+    }
+  }
+
+  .links-container {
+    position: absolute;
+    // bottom: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    opacity: 0;
+    width: 100%;
+  }
+
+  h3 {
     font-weight: bold;
+    color: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: 0;
+    transform: translateY(-50%);
   }
 }
 

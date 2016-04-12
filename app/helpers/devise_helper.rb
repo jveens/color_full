@@ -4,7 +4,7 @@ module DeviseHelper
 
     messages = resource.errors.full_messages.map { |msg| content_tag(:p, msg) }.join
     html = <<-HTML
-    <div class="alert alert-error alert-info text-center">
+    <div class="alert alert-error text-center">
       #{messages}
     </div>
     HTML

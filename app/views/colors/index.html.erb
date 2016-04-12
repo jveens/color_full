@@ -1,22 +1,26 @@
-<div class="row">
+
 
     <% @colors.each do |color| %>
       <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="background-color: <%= color.hexcode %>;">
-      	<div class="color-section">
-        <h4 ><%= color.name %></h4>
-        <p><%= color.hexcode %></p>
-        <% if color.user %>
-          <p>By: <%= color.user.try(:email) %></p>
-        <% end %>
-        <%= link_to 'Show', color %>
+      	<div class="color-section text-center">
+        <!-- <h4 ><%= color.name %></h4> -->
+        <h3><%= color.hexcode %></h3>
+       <!--  <% if color.user %>
+          <p>By: <span class="email"><%= color.user.try(:email) %></span></p>
+        <% end %> -->
 
-        <% if color.user == current_user %>
-          <%= link_to 'Edit', edit_color_path(color) %>
-        <% end %>
+        <div class="links-container">
+          <%= link_to 'Show', color %>
+
+          <% if color.user == current_user %>
+            <%= link_to 'Edit', edit_color_path(color) %>
+          <% end %>
+        </div>
       </div>
+
+
       </div>
     <% end %>
 
-</div>
 
 
