@@ -1,12 +1,16 @@
 class ColorsController < ApplicationController
   before_action :set_color, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:edit, :update, :destroy]
 
   # GET /colors
   # GET /colors.json
   def index
-    @colors = Color.all
+    if params[:id]
+      @colors = current_user.colors
+    else 
+      @colors = Color.all
+    end
   end
 
   # def user_index

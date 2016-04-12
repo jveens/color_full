@@ -27,9 +27,12 @@ ready = function() {
     	theme: 'bootstrap',
     	inline: true,
     	defaultValue: '#fff',
+        show: function() {
+            $('body.color-adjust').css('background-color', value);
+        },
     	change: function(value, opacity) {
 	        console.log(value + ' - ' + opacity);
-	        $('body.add-color').css('background-color', value);
+	        $('body.color-adjust').css('background-color', value);
 	    }
     });
 

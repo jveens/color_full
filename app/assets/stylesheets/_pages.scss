@@ -23,6 +23,15 @@ body.home-page {
   		}
 		}	
 
+    h3 {
+      margin-top: 40px;
+      a {
+        color: $white;
+      }
+      
+    }
+
+
     }
 
 .jumbotron {
@@ -76,9 +85,15 @@ body.edit-color {
 
 }
 
+.add-color {
+  .color-container {
+    padding-top: 120px;
+  }
+}
+
 .color-section {
   padding: 20px 15px 25px;
-  min-height: 190px;
+  min-height: 220px;
 
   h4 {
     font-weight: bold;
@@ -88,4 +103,41 @@ body.edit-color {
 .spectrum {
   min-height: 33px;
   position: relative;
+}
+
+.edit-color-holder {
+  // padding-top: 120px;
+
+  a {
+    margin: 0 5px;
+    color: $white;
+  }
+
+  .nav-subnav {
+    margin-bottom: 120px;
+  }
+
+  h2 {
+    color: $seethru;
+    margin-top: 30px;
+  }
+
+  h2.large {
+    margin: 50px;
+  }
+}
+
+.show-color {
+  .jumbotron {
+    background-color: $transparent;
+    margin-top: 0;
+    outline: 0;
+  }
+
+  .container.edit-color-holder {
+    outline: 12px solid $white;
+    outline-offset: -20px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
 }

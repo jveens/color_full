@@ -1,16 +1,22 @@
-<p id="notice"><%= notice %></p>
+<% content_for :body_class, "show-color" %>
+<div class="container text-center edit-color-holder" style="background-color: <%= @color.hexcode %>">
+	
+	<div class="jumbotron">
+		<h2>
+		  <%= @color.name %>
+		</h2>
+	
+		<h2 class="large">
+		  <%= @color.hexcode %>
+		</h2>
+	</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @color.name %>
-</p>
+</div>
 
-<p>
-  <strong>Hexcode:</strong>
-  <%= @color.hexcode %>
-</p>
 
-<% if @color.user == current_user %>
-  <%= link_to 'Edit', edit_color_path(@color) %>
-<% end %>
-<%= link_to 'Back', colors_path %>
+<div class="nav-subnav text-center">
+	<% if @color.user == current_user %>
+		<%= link_to 'Edit', edit_color_path(@color) %>
+	<% end %>
+	<%= link_to 'Back', colors_path %>
+</div>

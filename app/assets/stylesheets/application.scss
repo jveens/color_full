@@ -24,6 +24,7 @@
  $seethru: rgba(255,255,255,0.3);
  $transparent: transparent;
  $blue: #3498db;
+ $cornflower: #6495ED;
  $gainsboro: #DCDCDC;
  $red: #FF6347;
  $green: #3CB371;
@@ -41,7 +42,7 @@
  $navbar-default-bg: white;
  $navbar-default-color: $white;
  $navbar-default-link-color: $white;
- $navbar-default-link-hover-color: $ltgreen;
+ $navbar-default-link-hover-color: $cornflower;
 
  $btn-default-color: $black;
  $btn-default-border: transparent;
@@ -77,6 +78,15 @@
  	@include sans-bold;
  }
 
+ a {
+   text-transform: uppercase;
+   font-weight: bold;
+
+   + a {
+   	margin-left: 10px;
+   }
+ }
+
  h1, h2, h3 {
  	font-family: $serif;
  	text-transform: uppercase;
@@ -86,6 +96,8 @@
  	font-family: $sans;
  	text-transform: uppercase;
  }
+
+ 
 
  h5 {
  	font-size: 2rem;
