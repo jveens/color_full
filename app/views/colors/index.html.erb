@@ -5,9 +5,15 @@
       	<div class="color-section">
         <h4 ><%= color.name %></h4>
         <p><%= color.hexcode %></p>
+        <% if color.user %>
+          <p>By: <%= color.user.try(:email) %></p>
+        <% end %>
         <%= link_to 'Show', color %>
-        <%= link_to 'Edit', edit_color_path(color) %>
-        <%= link_to 'Destroy', color, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+        <% if color.user == current_user %>
+          <%= link_to 'Edit', edit_color_path(color) %>
+          <%= link_to 'Destroy', color, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </div>
       </div>
     <% end %>

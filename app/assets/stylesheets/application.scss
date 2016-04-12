@@ -27,11 +27,12 @@
  $gainsboro: #DCDCDC;
  $red: #FF6347;
  $green: #3CB371;
+ $ltgreen: #90EE90;
  $purple: #DA70D6;
 
  $body-bg: $white;
- $state-info-bg: transparentize($red, 0.9);
- $state-info-text: $red;
+ $state-info-bg: transparentize($blue, 0.9);
+ $state-info-text: $blue;
  $jumbotron-bg: $seethru;
  $jumbotron-heading-font-size: 9rem;
  $brand-primary: $black;
@@ -40,7 +41,7 @@
  $navbar-default-bg: white;
  $navbar-default-color: $white;
  $navbar-default-link-color: $white;
- $navbar-default-link-hover-color: $purple;
+ $navbar-default-link-hover-color: $ltgreen;
 
  $btn-default-color: $black;
  $btn-default-border: transparent;

@@ -1,11 +1,18 @@
 class ColorsController < ApplicationController
   before_action :set_color, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /colors
   # GET /colors.json
   def index
     @colors = Color.all
   end
+
+  # def user_index
+  #   @user = current_user
+  #   @colors = @user.colors
+  # end
 
   # GET /colors/1
   # GET /colors/1.json
@@ -65,6 +72,11 @@ class ColorsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_color
       @color = Color.find(params[:id])
+    end
+
+    def set_user
+      @color = current_user.colors.find_by(id: params[:id])
+      redirect_to colors_path, notice: "You can only updates colours created by your account." if @color.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

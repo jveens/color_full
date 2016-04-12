@@ -10,5 +10,7 @@
   <%= @color.hexcode %>
 </p>
 
-<%= link_to 'Edit', edit_color_path(@color) %> |
+<% if @color.user == current_user %>
+  <%= link_to 'Edit', edit_color_path(@color) %>
+<% end %>
 <%= link_to 'Back', colors_path %>
