@@ -91,7 +91,7 @@ body.edit-color {
   }
 }
 
-.color-section {
+.colour-section {
   min-height: 220px;
   position: relative;
 
@@ -112,6 +112,17 @@ body.edit-color {
     left: 0;
     opacity: 0;
     width: 100%;
+  }
+
+  .copy-colour {
+    cursor: pointer;
+    font-family: $font-family-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   h3 {

@@ -1,10 +1,9 @@
 
-
   <% if @colors.first %>
 
     <% @colors.each do |color| %>
       <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="background-color: <%= color.hexcode %>;">
-      	<div class="color-section text-center">
+      	<div class="colour-section text-center">
         <!-- <h4 ><%= color.name %></h4> -->
         <h3><%= color.hexcode %></h3>
        <!--  <% if color.user %>
@@ -12,6 +11,10 @@
         <% end %> -->
 
         <div class="links-container">
+          <div class="copy-colour" data-colour="<%= color.hexcode %>">
+            <%= color.hexcode %>
+          </div>
+
           <%= link_to 'Show', color %>
 
           <% if color.user == current_user %>
@@ -32,6 +35,9 @@
       <%= link_to '+ Add a Colour', new_color_path, class: 'large serif' %>
     </div>
   <% end -%>
+
+  <input type="text" name="clipboard">
+
 
 
 

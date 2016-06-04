@@ -20,6 +20,7 @@
 
 
 var ready;
+
 ready = function() {
 
   console.log('ready');
@@ -35,6 +36,59 @@ ready = function() {
 	        $('body.color-adjust').css('background-color', value);
 	    }
     });
+
+    // clipboard copy script adapted from Wes Bos' csscursor.info
+    var colours = document.querySelectorAll('.colour-section .copy-colour');
+
+    function copyColour(e) {
+
+        console.log(e);
+
+        e.preventDefault();
+
+        var t = e.target;
+
+        var c = t.dataset.colour;
+
+        var clipboard = (c ? document.querySelector('[name="clipboard"]') : null);
+        clipboard.value = c;
+
+        console.log( clipboard.value );
+
+        if (clipboard && clipboard.select) {
+
+            clipboard.select();
+            console.log(clipboard);
+
+        try {
+            // copy text
+            document.execCommand('copy');
+            clipboard.blur();
+            clipboard.value = '';
+
+            console.log(clipboard.value);
+
+            // copied animation
+            t.classList.add('copied');
+            setTimeout(function() { t.classList.remove('copied'); }, 1500);
+        }
+            catch (err) {
+                alert('please press Ctrl/Cmd+C to copy');
+            }
+        }
+
+        // var clipboardInput = document.querySelector('[name="clipboard"]');
+        // clipboardInput.value = this.dataset.colour;
+        // clipboardInput.select();
+
+        // document.execCommand('copy');
+        
+    }
+
+    Array.from(colours).forEach(colour => colour.addEventListener( 'click', copyColour, true ));
+
+
+
 
 };
 
