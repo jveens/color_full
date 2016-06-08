@@ -49,6 +49,18 @@
  $btn-default-bg: transparent;
  $btn-font-weight: bold;
 
+ $dropdown-bg: $black;
+ $dropdown-border: $black;
+ $dropdown-fallback-border: $black;
+ $dropdown-divider-bg: $black;
+ $dropdown-link-color: $white;
+ $dropdown-link-hover-color: $cornflower;
+ $dropdown-link-hover-bg: $black;
+ $dropdown-link-active-color: $cornflower;
+ $dropdown-link-active-bg: $black;
+ $dropdown-header-color: $white;
+ $dropdown-caret-color: $white;
+
  $border-radius-base: 0;
  $border-radius-small: 0;
  $border-radius-large: 0;
@@ -76,6 +88,10 @@
 
  .btn-default {
  	@include sans-bold;
+ }
+
+ .dropdown-menu {
+ 	margin: 0;
  }
 
  a {
@@ -171,6 +187,31 @@
 	background-color: $black;
 	color: $white;
 	margin-bottom: 0;
+
+	.btn-default {
+		color: $white;
+
+		&:hover {
+			color: $cornflower;
+		}
+
+		&:active {
+			color: $white;
+		}
+
+		&.dropdown-toggle {
+			color: $white;
+			height: 50px;
+			line-height: 37px;
+			min-width: 158px;
+
+			&:hover {
+				color: $cornflower;
+			}
+		}
+
+
+	}
  }
 
 
