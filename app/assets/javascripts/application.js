@@ -71,8 +71,8 @@ ready = function() {
             // t.classList.add('copied');
             // setTimeout(function() { t.classList.remove('copied'); }, 1500);
 
-            t.innerHTML = 'copied';
-            setTimeout(function() { t.innerHTML = c; }, 1500);
+            t.innerHTML = 'Copied!';
+            setTimeout(function() { t.innerHTML = 'Copy'; }, 1500);
         }
             catch (err) {
                 alert('please press Ctrl/Cmd+C to copy');

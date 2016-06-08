@@ -12,7 +12,7 @@
 
         <div class="links-container">
           <div class="copy-colour" data-colour="<%= color.hexcode %>">
-            <%= color.hexcode %>
+            Copy
           </div>
 
           <%= link_to 'Show', color %>
@@ -27,6 +27,9 @@
       </div>
     <% end %>
 
+    <input type="text" name="clipboard">
+
+
   <% else %>
     <div class="container text-center no-colors">
       <p class="large serif">Uh oh!</p>
@@ -36,7 +39,6 @@
     </div>
   <% end -%>
 
-  <input type="text" name="clipboard">
 
 
 
