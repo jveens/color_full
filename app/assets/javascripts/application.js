@@ -64,16 +64,19 @@ ready = function() {
             // copy text
             document.execCommand('copy');
             clipboard.blur();
-            clipboard.value = '';
 
             console.log(clipboard.value);
 
             // copied animation
-            t.classList.add('copied');
-            setTimeout(function() { t.classList.remove('copied'); }, 1500);
+            // t.classList.add('copied');
+            // setTimeout(function() { t.classList.remove('copied'); }, 1500);
+
+            t.innerHTML = 'copied';
+            setTimeout(function() { t.innerHTML = c; }, 1500);
         }
             catch (err) {
                 alert('please press Ctrl/Cmd+C to copy');
+                console.log(err);
             }
         }
 
