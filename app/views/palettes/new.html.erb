@@ -1,5 +1,10 @@
-<h1>New Palette</h1>
+<% content_for :body_class, "add-color color-adjust" %>
+<div class="text-center color-container">
+	
+	<h1>New Palette</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Back', palettes_path %>
+	<%= link_to 'Back', palettes_path %>
+
+</div>
