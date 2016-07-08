@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :palettes
-  resources :colors
+  resources :colours
   devise_for :users
   root 'pages#home'
 

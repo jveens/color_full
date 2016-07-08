@@ -1,0 +1,45 @@
+
+  <% if @colours.first %>
+
+    <% @colours.each do |colour| %>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="background-color: <%= colour.hexcode %>;">
+      	<div class="colour-section text-center">
+        <!-- <h4 ><%= colour.name %></h4> -->
+        <h3><%= colour.hexcode %></h3>
+       <!--  <% if colour.user %>
+          <p>By: <span class="email"><%= colour.user.try(:email) %></span></p>
+        <% end %> -->
+
+        <div class="links-container">
+          <div class="copy-colour" data-colour="<%= colour.hexcode %>">
+            Copy
+          </div>
+
+          <%= link_to 'Show', colour %>
+
+          <% if colour.user == current_user %>
+            <%= link_to 'Edit', edit_colour_path(colour) %>
+          <% end %>
+        </div>
+      </div>
+
+
+      </div>
+    <% end %>
+
+    <input type="text" name="clipboard">
+
+
+  <% else %>
+    <div class="container text-center no-colours">
+      <p class="large serif">Uh oh!</p>
+      <p class="large sans">It appears that you're living in a black &amp; white world.<br>Why not add a little colour by clicking the link below?</p>
+      <!-- <a class="large serif" href=""> + Add A Colour. </a> -->
+      <%= link_to '+ Add a Colour', new_colour_path, class: 'large serif' %>
+    </div>
+  <% end -%>
+
+
+
+
+

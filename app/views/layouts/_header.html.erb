@@ -26,10 +26,10 @@
 					<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" aria-labelledby="colorsMenu">
-					<li><%= link_to "Explore", colors_path, class: "btn btn-default btn-bold" %></li>
+					<li><%= link_to "Explore", colours_path, class: "btn btn-default btn-bold" %></li>
 					<% if user_signed_in? %>
-							<li><%= link_to "My Colours", colors_path(id: current_user.id ), class: "btn btn-default btn-bold text-left" %></li>
-							<li><%= link_to '+ New Colour', new_color_path, class: "btn btn-default btn-bold text-left" %></li>
+							<li><%= link_to "My Colours", colours_path(id: current_user.id ), class: "btn btn-default btn-bold text-left" %></li>
+							<li><%= link_to '+ New Colour', new_colour_path, class: "btn btn-default btn-bold text-left" %></li>
 					<% end -%>
 				</ul>
 			</li>

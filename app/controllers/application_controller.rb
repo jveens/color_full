@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
 	def after_sign_in_path_for(resource)
 		#path_to_redirect_to
-		colors_path
+		colours_path
 	end
 
 

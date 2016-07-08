@@ -1,0 +1,18 @@
+<% content_for :body_class, "edit-colour colour-adjust" %>
+<% content_for :body_style, "background-colour: #{ @colour.hexcode }" %>
+
+<div class="container">
+
+	<h1>Edit colour</h1>
+
+	<%= render 'form' %>
+
+	<%= link_to 'Show', @colour %> |
+	<%= link_to 'Back', colours_path %>
+
+
+	<% if @colour.user == current_user %>
+		<%= link_to 'Destroy', @colour, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% end %>
+	
+</div>
